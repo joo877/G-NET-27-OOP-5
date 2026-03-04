@@ -56,6 +56,19 @@
 
              */
             #endregion
+            #region Q3
+            /*
+              shallow copy : copy direct object and don't copy nested object but copy refrences only
+               using when we want Two objects, same inner references  Changing inner object affects both copies
+           
+            deep copy : copy direct object  nested object,
+            using when we want Two completely independent objects Changing one never affects the other
+
+             risk in shallow copy : when change the reference field the original will be change also 
+             
+             
+             */
+            #endregion
             #endregion
         }
     }
