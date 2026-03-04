@@ -69,6 +69,22 @@
              
              */
             #endregion
+            #region Q4
+            /*
+               OutPut : Dev - Testing 
+                         QA - Testing
+
+
+            shallow copy : copy direct object and don't copy nested object but copy refrences only
+
+            Title is string immutable so create new  object  with new address and e2 refere to this address "QA"
+               so e1.Title still refere "Dev"
+
+             Dept is an object from Department so e1,e2 shared the same object any change from each one 
+             another affected
+             */
+
+            #endregion
             #endregion
         }
     }
