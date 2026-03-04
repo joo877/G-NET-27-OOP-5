@@ -86,6 +86,51 @@
 
             #endregion
             #endregion
+
+            #region part02
+            Cinema cinema = new Cinema();
+            StandardTicket standard = new StandardTicket("Inception", 120m, "A5", "Yes");
+            VIPTicket vIP = new VIPTicket("Avengers", 200m, "Yes", 50m, "Yes");
+            IMAXTicket iMAX = new IMAXTicket("Dune", 180m, "No","Yes" );
+            VIPTicket vipClone= (VIPTicket) vIP.Clone();
+            vipClone.MovieName = "Interstellar ";
+            vipClone.Booked = "No";
+
+            cinema.OpenCinema();
+
+
+            cinema.AddTicket(standard);
+            cinema.AddTicket(vIP);
+            cinema.AddTicket(iMAX);
+            cinema.AddTicket(vipClone);
+
+            Console.WriteLine();
+            Console.WriteLine("::::::: All Tickets :::::::::");
+            cinema.PrintAllTickets();
+
+            Console.WriteLine();
+            Console.WriteLine("--- Clone Test ---");
+
+            Console.Write("Original :  ");
+            vIP.PrintTicket();
+            Console.Write("Clone :");
+            vipClone.PrintTicket();
+
+            Console.WriteLine();
+            Console.WriteLine("--- After Cancellation ---");
+            standard.Cansceled();
+            standard.PrintTicket();
+
+            Console.WriteLine();
+            Console.WriteLine("--- BookingHelper.PrintAll ---");
+            BookingHelper.print([standard,vIP,iMAX]);
+           
+
+            Console.WriteLine();
+            Console.WriteLine();
+            cinema.CloseCinema();
+
+            #endregion
         }
     }
 }
